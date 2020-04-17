@@ -90,6 +90,7 @@ func putPerson(person Thing, db *sql.DB) {
 	_, err := db.Exec(`INSERT into helloworld.person (Person, Age, FavoriteFood) VALUES ($1, $2, $3)`, person.Person, person.Age, person.FavoriteFood)
 	if err != nil {
 		panic(err)
+		// A comment
 	}
 }
 
@@ -104,6 +105,7 @@ func getPerson(name string, db *sql.DB) (person Thing) {
 		return
 	default:
 		panic(err)
+		// A Comment
 	}
 }
 
@@ -126,6 +128,7 @@ func getPersons(db *sql.DB) (persons []Thing) {
 	err = rows.Err()
 	if err != nil {
 		log.Fatal(err)
+		// A Comment
 	}
 
 	return
