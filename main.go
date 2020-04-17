@@ -104,6 +104,7 @@ func getPerson(name string, db *sql.DB) (person Thing) {
 		return
 	default:
 		panic(err)
+		// A Comment
 	}
 }
 
