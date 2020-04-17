@@ -90,6 +90,7 @@ func putPerson(person Thing, db *sql.DB) {
 	_, err := db.Exec(`INSERT into helloworld.person (Person, Age, FavoriteFood) VALUES ($1, $2, $3)`, person.Person, person.Age, person.FavoriteFood)
 	if err != nil {
 		panic(err)
+		// A Comment
 	}
 }
 
